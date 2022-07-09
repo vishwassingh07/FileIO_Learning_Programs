@@ -9,7 +9,7 @@ namespace FileIO_Learning_Programs
             string filePath = @"D:\RFP BATCH 157\FileIO Learning Prorams\FileIO_Learning_Programs\FileIO_Learning_Programs\FileIO.txt";
             bool end = true;
             Console.WriteLine("1. Checking File Exists Or Not\n2. Reading Line By Line\n3. Reading All Lines At Once\n4. " +
-                "Copy File\n5. Delete File\n6. End The Program");
+                "Copy File\n5. Delete File\n6. Read From StreamReader\n7. End The Program");
             while (end)
             {
                 Console.Write("Choose an option to execute : ");
@@ -32,6 +32,9 @@ namespace FileIO_Learning_Programs
                         FileIOoperations.DeleteFile(filePath);
                         break;
                     case 6:
+                        FileIOoperations.ReadFromStreamReader(filePath);
+                        break;
+                    case 7:
                         end = false;
                         break;
                     default:

@@ -64,5 +64,18 @@ namespace FileIO_Learning_Programs
                 Console.WriteLine("File Does Not Exist");
             }
         }
+        //Reading File From StreamReader
+        public static void ReadFromStreamReader(string filePath)
+        {
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                string s = "";
+                while ((s = reader.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+                reader.Close();
+            }
+        }
     }
 }
