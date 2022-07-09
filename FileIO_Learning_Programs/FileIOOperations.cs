@@ -52,5 +52,17 @@ namespace FileIO_Learning_Programs
             File.Copy(path, copiedFilePath);
             Console.ReadKey();
         }
+        //Deleting The File
+        public static void DeleteFile(string filePath)
+        {
+            if (DoesFileExist(filePath))
+            {
+                File.Delete(filePath);
+            }
+            else
+            {
+                Console.WriteLine("File Does Not Exist");
+            }
+        }
     }
 }
