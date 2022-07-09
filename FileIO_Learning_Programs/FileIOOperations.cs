@@ -44,5 +44,13 @@ namespace FileIO_Learning_Programs
                 Console.WriteLine(line);
             }
         }
+        //Copying The File
+        public static void CopyFile(string filePath)
+        {
+            string path = @"D:\RFP BATCH 157\FileIO Learning Prorams\FileIO_Learning_Programs\FileIO_Learning_Programs\FileIOForCopy.txt";
+            string copiedFilePath = @"D:\RFP BATCH 157\FileIO Learning Prorams\FileIO_Learning_Programs\FileIO_Learning_Programs\CopiedFile2IO.txt";
+            File.Copy(path, copiedFilePath);
+            Console.ReadKey();
+        }
     }
 }
