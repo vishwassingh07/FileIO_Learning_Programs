@@ -77,5 +77,16 @@ namespace FileIO_Learning_Programs
                 reader.Close();
             }
         }
+        //Writing File From StreamWriter
+        public static void WriteFromStreamWriter(string filePath)
+        {
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                writer.WriteLine("Bangalore's weather is awesome");
+                writer.Close();
+
+                Console.WriteLine(File.ReadAllText(filePath));
+            }
+        }
     }
 }
